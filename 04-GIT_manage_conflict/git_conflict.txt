@@ -1,0 +1,124 @@
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/Quest$ git pull origin master
+Depuis https://github.com/rachOS/WCS_quest_2020
+ * branch            master     -> FETCH_HEAD
+Mise à jour e2042b1..e15bc17
+error: Vos modifications locales aux fichiers suivants seraient écrasées par la fusion :
+	README.txt
+Veuillez valider ou remiser vos modifications avant la fusion.
+Abandon
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/Quest$ nano README.txt 
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/Quest$ git clone https://github.com/rachOS/WCS_quest_2020.git
+fatal: le chemin de destination 'WCS_quest_2020' existe déjà et n'est pas un répertoire vide.
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/Quest$ ls
+08-CSS_responsive    CssBoxModel  LICENCE.txt          queteCSS       Structurer_une_page_HTML.html
+09-CSS_flexbox       head.html    linkedin_avatar.ico  README.txt     WCS_quest_2020
+Compter_les_alumnis  images       pseudocode           sharezza-oops
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/Quest$ cd WCS_quest_2020/
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/Quest/WCS_quest_2020$ ls
+08-CSS_responsive    CssBoxModel  LICENCE.txt          queteCSS       Structurer_une_page_HTML.html
+09-CSS_flexbox       head.html    linkedin_avatar.ico  README.txt
+Compter_les_alumnis  images       pseudocode           sharezza-oops
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/Quest/WCS_quest_2020$ nano README.txt 
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/Quest/WCS_quest_2020$ cd ..
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/Quest$ rm -r WCS_quest_2020/
+rm : supprimer 'WCS_quest_2020/.git/objects/58/9fc57c4aa4ce7a7de13eb94de2c1922c286e5f' qui est protégé en écriture et est du type « fichier » ? yes
+rm : supprimer 'WCS_quest_2020/.git/objects/cf/cc57f038a5b425dd5f707c48423f095c16f50a' qui est protégé en écriture et est du type « fichier » ? y
+rm : supprimer 'WCS_quest_2020/.git/objects/b1/fbc146ebb68d23b7d21bb5f7d685b37b58dd34' qui est protégé en écriture et est du type « fichier » ? o
+rm : supprimer 'WCS_quest_2020/.git/objects/a8/bdba584385e5a0e5b96a5b8f80e0335aad8ea4' qui est protégé en écriture et est du type « fichier » ? O
+rm : supprimer 'WCS_quest_2020/.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391' qui est protégé en écriture et est du type « fichier » ? yes
+rm : supprimer 'WCS_quest_2020/.git/objects/09/787a3104cd9e994c0bdefa800b377f3810fc0a' qui est protégé en écriture et est du type « fichier » ? Y
+rm : supprimer 'WCS_quest_2020/.git/objects/55/6b111a1be9a56b384a9cc1e97397b41d2cbb46' qui est protégé en écriture et est du type « fichier » ? no
+rm: impossible de supprimer 'WCS_quest_2020/.git/objects/55': Le dossier n'est pas vide
+rm : supprimer 'WCS_quest_2020/.git/objects/f9/c5504d4c083daddbcbc3fafbbf0aeb0bd926c7' qui est protégé en écriture et est du type « fichier » ? ^[[A^[[A^Z
+[9]+  Stoppé                 rm -r WCS_quest_2020/
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/Quest$ rm -rf WCS_quest_2020/
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/Quest$ ls
+08-CSS_responsive    CssBoxModel  LICENCE.txt          queteCSS       Structurer_une_page_HTML.html
+09-CSS_flexbox       head.html    linkedin_avatar.ico  README.txt
+Compter_les_alumnis  images       pseudocode           sharezza-oops
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/Quest$ cd ..
+rach@Stretch64:~/Documents/WILD CODE SCHOOL$ mv Quest/ WCS_quest_2020
+rach@Stretch64:~/Documents/WILD CODE SCHOOL$ ls
+ charte_d_un_apprenant_efficace_GC.odt                 EvaluationResults.pdf
+ charte_d_un_apprenant_efficace_GC.pdf                 EvaluationResults.zip
+'contrat de formation professionnelle.pdf'             mandat_prelevement_sepa.jpg
+ cqqcoqp.png                                           P4Grm8Is_Etudier-efficacement-en-5-etapes.pdf
+ CuWz4cbZ_Prendre-contact-avec-le-cours-mind-map.png   R9oNhZsn_Smaart.pdf
+'Demande_de_prelevement_Mandat_SEPA .pdf'             'RICE (2).pdf'
+ DgNd8zFJ_2012.pdf                                     se-mettre-en-projet1.png
+ dhdvxjIn_GTD-5-etapes.pdf                             techniques-reactivation.png
+ document_financement.zip                              WCS_quest_2020
+ ebay.html                                             wild_circus.html
+ EvaluationResults.odt
+rach@Stretch64:~/Documents/WILD CODE SCHOOL$ git clone https://github.com/rachOS/WCS_quest_2020.git
+fatal: le chemin de destination 'WCS_quest_2020' existe déjà et n'est pas un répertoire vide.
+rach@Stretch64:~/Documents/WILD CODE SCHOOL$ cd WCS_quest_2020/
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/WCS_quest_2020$ nano README.txt 
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/WCS_quest_2020$ git pull origin master
+Depuis https://github.com/rachOS/WCS_quest_2020
+ * branch            master     -> FETCH_HEAD
+Mise à jour e2042b1..e15bc17
+error: Vos modifications locales aux fichiers suivants seraient écrasées par la fusion :
+	README.txt
+Veuillez valider ou remiser vos modifications avant la fusion.
+Abandon
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/WCS_quest_2020$ nano README.txt 
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/WCS_quest_2020$ git status
+Sur la branche master
+Modifications qui ne seront pas validées :
+  (utilisez "git add <fichier>..." pour mettre à jour ce qui sera validé)
+  (utilisez "git checkout -- <fichier>..." pour annuler les modifications dans la copie de travail)
+
+	modifié :         README.txt
+
+aucune modification n'a été ajoutée à la validation (utilisez "git add" ou "git commit -a")
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/WCS_quest_2020$ git add README.txt 
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/WCS_quest_2020$ git commit -m "adding LOCAL for the 04-GIT conflit! quest" 
+[master 0602e18] adding LOCAL for the 04-GIT conflit! quest
+ 1 file changed, 1 insertion(+)
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/WCS_quest_2020$ git pull origin master
+Depuis https://github.com/rachOS/WCS_quest_2020
+ * branch            master     -> FETCH_HEAD
+Fusion automatique de README.txt
+CONFLIT (contenu) : Conflit de fusion dans README.txt
+La fusion automatique a échoué ; réglez les conflits et validez le résultat.
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/WCS_quest_2020$ nano README.txt 
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/WCS_quest_2020$ nano README.txt 
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/WCS_quest_2020$ git push origin master
+Username for 'https://github.com': rachOS
+Password for 'https://rachOS@github.com': 
+To https://github.com/rachOS/WCS_quest_2020.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: impossible de pousser des références vers 'https://github.com/rachOS/WCS_quest_2020.git'
+astuce: Les mises à jour ont été rejetées car la pointe de la branche courante est derrière
+astuce: son homologue distant. Intégrez les changements distants (par exemple 'git pull ...')
+astuce: avant de pousser à nouveau.
+astuce: Voir la 'Note à propos des avances rapides' dans 'git push --help' pour plus d'information.
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/WCS_quest_2020$ git status
+Sur la branche master
+Vous avez des chemins non fusionnés.
+  (réglez les conflits puis lancez "git commit")
+  (utilisez "git merge --abort" pour annuler la fusion)
+
+Chemins non fusionnés :
+  (utilisez "git add <fichier>..." pour marquer comme résolu)
+
+	modifié des deux côtés :  README.txt
+
+aucune modification n'a été ajoutée à la validation (utilisez "git add" ou "git commit -a")
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/WCS_quest_2020$ git add README.txt 
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/WCS_quest_2020$ git commit -m "conflict done!" 
+[master ead8698] conflict done!
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/WCS_quest_2020$ git push origin master
+Username for 'https://github.com': rachOS
+Password for 'https://rachOS@github.com': 
+Énumération des objets: 8, fait.
+Décompte des objets: 100% (8/8), fait.
+Compression par delta en utilisant jusqu'à 4 fils d'exécution
+Compression des objets: 100% (3/3), fait.
+Écriture des objets: 100% (4/4), 484 bytes | 484.00 KiB/s, fait.
+Total 4 (delta 1), réutilisés 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/rachOS/WCS_quest_2020.git
+   e15bc17..ead8698  master -> master
+rach@Stretch64:~/Documents/WILD CODE SCHOOL/WCS_quest_2020$ 
