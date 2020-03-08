@@ -1,0 +1,382 @@
+*{
+    margin: 0 auto;
+    width: 100%;
+}
+
+body{
+    margin: 0 auto;
+    background-color: black;
+    width: 80%;
+    /* height: 100%; */
+    /* min-height: 100%; */
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+  
+main{
+    background-color: #505050;
+    padding: 5px 5px 1px 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    max-width: 100%;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-flow: column;
+}
+
+/* NAVIGATION */
+
+nav{
+    background-color: #0a0101;
+    /* padding: 5px; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul{
+    /* border: solid red; */
+    /* margin: 5px auto 5px 5px; */
+    padding:0;
+    /* width: 50vw; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+li{
+    /* border: solid blue; */
+    color: white; 
+    padding: 5px;
+}
+
+li:nth-of-type(2):hover,li:nth-of-type(3):hover{
+    background-color: white;
+    color: black;
+}
+
+ul li{
+    display: inline-block;
+    height: 100%;
+}
+
+.site_name{
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.site_menu_fellows{
+    padding-left: 0px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+    
+}
+
+.site_menu_contact{
+    display: flex;
+    flex: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CAROUSEL AND FELLOWS text */
+
+
+.carousel{
+    margin: 0 auto;
+    background-color:lightgrey;
+    height: 150px;
+    display: flex;
+    justify-self: start;
+    /* border: solid; */
+}
+section{
+    background-color: lightgrey;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /* border: 1px solid; */
+}
+
+/* FELLOW text */
+
+.fellow{
+    background-color: white;
+    display: flex;
+    width: 100%;
+    max-width: auto;
+    height: 100px;
+    align-self: auto;
+    /* margin: 0px 0px 0px 0px; */
+    flex-wrap: wrap;
+    /* border: 1px solid; */
+
+}
+
+.resize_fellow{
+    font-size: 2em;
+    margin-right: 0px;
+    padding: 0;
+    width: auto;
+    display: flex;
+    padding-top: 25px;
+    /* border:blue 1px solid; */
+    align-self: center;
+    justify-content: flex-end;
+}
+.resize_eatLater{
+    margin-left: 0px;
+    width: auto;
+    padding-left: 10px;
+    display: flex;
+    font-size: 1em;
+    padding-top: 25px;
+    justify-content: flex-start;
+    
+    /* border: 1px solid; */
+}
+
+.transition{
+    display: flex;
+    margin-bottom: 0px;
+    height: 0px;
+    align-self: flex-end;
+
+}
+
+
+/* ARTICLES */
+
+hr{ 
+    display:  flex;
+    background-color: white;
+    margin-top: 0em;
+    align-content: center;
+    width: 98%;
+}
+
+article{
+    /* border: solid; */
+    padding:0 auto;
+    display: flex;
+    align-items: stretch;
+    justify-items: center;
+    flex: auto;
+}
+.wanted_dead{
+    margin: 0rem;
+    height: 300px;
+    background-color: white;
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    /* justify-items: space-between; */
+    /* border: 1px solid blue; */
+}
+
+
+.wanted{
+    display: flex;
+    align-items: stretch;
+    background-color: lightgrey;
+    margin: 5% 5%;
+    /* border: 5px solid red; */
+}
+
+/* FORM  */
+
+form{
+    /* border: 5px solid blue; */
+    background-color: white;
+    
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+form div{
+
+    /* border: solid; */
+    width: 500px;
+    height: 150px;
+    padding: 5px auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-items: center ;
+    
+}
+
+input, select, textarea{
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+form h2{
+
+    color: #505050;
+    font-size: 1em;
+    /* border: solid; */
+
+    margin: 5px 0px 0px 10px;
+}
+
+button{
+    display: flex;
+    margin-right: 0px;
+    width: auto;
+    height: auto;
+}
+
+/* FOOTER */
+
+footer{
+    /* border: solid; */
+    font: 8px arial;
+
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    /* flex-wrap: wrap; */
+
+}
+
+.div_footer{
+    display: flex;
+    flex-wrap: nowrap;
+    /* border: solid blue; */
+}
+
+.about, .legal{
+
+    /* border: solid; */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex: 2 10rem;
+    /* flex-wrap: wrap; */
+}
+
+.follow{
+    /* border: solid; */
+    display: flex;
+    font-weight: bolder;
+    font-size: 14px;
+    flex-direction: column;
+    /* align-content: center; */
+    flex: 2;
+    /* flex-wrap: wrap; */
+    /* justify-content: flex-end; */
+    /* margin-right: 0px; */
+}
+
+li{
+    /* border: solid; */
+    display: flex;
+    justify-content: center;
+
+
+}
+
+
+
+
+/* RESPONSIVE Mobile */
+
+@media only screen and (max-width: 961px){
+
+    /* FORM */
+
+    .resize_article{
+
+        display: flex;
+
+        height: 100%;
+
+        flex-direction: column;
+        align-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .wanted{
+        display: flex;
+
+        width: 80%;
+        height: 100px;
+        margin: 5px;
+        margin-right: 0px;
+  
+        /* background-color: teal; */
+    }
+
+    form{
+        display: flex;
+        /* background-color: tomato; */
+    }
+
+    form h2{
+        display: flex;
+
+        width: 100%;
+        margin: 0px;
+        height: 50px;
+
+        justify-content: center;
+        /* border: solid; */
+        
+        align-items: center;
+    }
+
+    /* FOOTER */
+
+    footer{
+
+        display: flex;
+
+        height: auto;
+
+    }
+  
+    .div_footer{
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+        /* border:  solid red; */
+    }
+    .about, .legal, .follow{
+        display: flex;
+        flex: unset;
+        /* border: solid red; */
+    }
+
+    li{
+        display: flex;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        /* text-align: center; */
+        width: auto;
+        height: auto;
+        max-height: 10px;
+        /* border: solid; */
+    }
+   
+}

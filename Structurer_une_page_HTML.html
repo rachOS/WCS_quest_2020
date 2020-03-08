@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Grégory Chamekh">
+
+    <meta name="description" content="To be ready for the begining of the Wild Code School training, 
+    some quests are recommended. Here, there is a pratice for 'the good practice'. ">
+
+    <title>Find the precious</title>
+
+<!-- open graph data  -->
+
+    <meta name="twitter:title" content="The good practice of HTML">
+
+    <meta property="og:image" content="https://odyssey.wildcodeschool.com/assets/android-icon-192x192-62efe3b81cd8fbb29316e22636a627577f79ba6673da757ba365f54547dad741.png">
+
+    <meta property="og:description" content="The Wild Code School quests are some exercices who will be usefull for the new wilders (new students). To be validate, 3 mates must approve the result.">
+
+    <meta property="og:title" content="Wild Code School Quests">
+
+<!-- favicon-->
+    <link rel="icon" href="linkedin_avatar.ico" type="image/x-icon">
+
+<!--<link rel="stylesheet" href="my-css-file.css"> -->
+
+<!-- CSS en brut dans les balise <style> -->
+    <style>
+        
+    </style>
+    
+</head>
+
+<body>
+
+    <header>
+        <h1>FindThePrecious.com</h1>     
+        <nav>
+            <ul>
+                <li><a href=#wanted title="The fellows wanted">Fellows</a></li>
+                <li><a href=#contact title="The contact form">Contact us</a></li>
+                <!--Utiliser des liens relatifs là où c'est possible (quand les liens sont sur le même serveur/site-->
+            </ul>
+        </nav>
+        
+    </header>
+
+    <section>
+        <!-- images enregistrée en local/serveur -->
+        <div>
+            <img src="images/dangerous_fellowship.png" alt="A dangerous fellowship try to destroy the ring" width="450" height="150"> <!-- title="Warning info for the Mordor" -->
+        </div>
+
+        <h2 id="wanted">fellows wanted dead</h2>
+        <h4>(or alive if you want to eat them later)</h4>
+        
+        <div>
+            <img src="images/wizard.png" alt="The reward for the wizard is 1000 gold coins" width="150" height="150"> <!-- title="Wizard reward" -->
+            <p>Lorem ipsum dolor sit amet.<br>
+            Lorem, ipsum dolor</p>
+        </div>
+        <!-- Test de la balise <figure> et <figcaption> en remplacement de l'attribut "title" -->
+        <div>
+            <figure>
+                <img src="images/hobbit.png" alt="The Hobbits must be DEAD"  width="150" height="150"> <!-- title="Hobbits reward" -->
+                <figcaption>Hobbits reward <br>
+                Lorem ipsum dolor sit amet.<br>
+                Lorem, ipsum dolor</figcaption>
+            </figure>
+        </div>
+        <div>
+            <img src="images/dwarf.png" alt="The reward for the dwarf is 250 gold coins"  width="150" height="150"> <!-- title="Dwarf reward" -->
+            <p>Lorem ipsum dolor sit amet.<br>
+            Lorem, ipsum dolor</p>
+        </div>
+    </section>
+
+    <section>
+        <form action="/ma_base_de_donnée" method="POST">
+            <h2 id="contact">contact us</h2>
+            <ul>
+                <li>
+                    <label for="user-email"></label>
+                    <input type="email" name="mail" id="user-email" value="Enter your email please" required>
+                </li>
+                <li>
+                    <label for="user-website"></label>
+                    <input type="text" name="website" id="user-website" value="Enter your website URL please" required>
+                </li>
+                <li>
+                    <label for="user-select">Select your answer: </label><br>
+                    <select id="user-select" name="answer">
+                        <option value="spotted">I have see one of them</option>
+                        <option value="killed">I have kill all the hobbits</option>
+                        <option value="scouting">Keep looking</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="user-message"></label>
+                    <textarea  cols="15" rows="10" id="user-message" placeholder="your message" required></textarea>
+                </li>
+                <li>
+                    <button type="submit">Send it!</button>
+                </li>
+            </ul>
+        </form>
+    </section>
+
+    <footer>
+        <div>
+            <ul>
+                <li>
+                    about us
+                </li>
+                <li>
+                   fellows
+                </li>
+                <li>
+                    Join our army
+                 </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    FAQ
+                </li>
+                <li>
+                   Reward conditions
+                </li>
+                <li>
+                    Legal mentions
+                 </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    Sauron4Ever.com
+                </li>
+                <li>
+                   Follow him also on twitter
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- <script src="my-js-file.js"></script> -->
+</body>
+</html>

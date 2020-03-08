@@ -1,0 +1,150 @@
+body{
+  margin: 0 auto;
+  background-color: black;
+  width: 50%;
+}
+
+main{
+  background-color: #e8e8e8;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  height: auto;
+  max-width: 100%;
+}
+
+nav{
+  background-color: #0a0101;
+  padding: 5px;
+/*   border: solid green; */
+}
+
+ul{
+/*   border: solid red; */
+  margin: 5px auto 5px 5px;
+  padding:0;
+}
+
+li{
+/*   border: solid blue; */
+  margin: 1px 5px ;
+}
+.site_name{
+  padding-left: 0px;
+  color: white;
+  font-weight: bold;
+}
+
+.site_menu{
+  color: lightgrey;
+}
+
+.site_menu:hover{
+  background-color: white;
+  color: black;
+  
+}
+
+ul li{
+  display: inline-block;
+  height: 100%;
+}
+
+.carousel{
+  background-color:lightgrey;
+  height: 150px; 
+}
+
+section{
+  background-color: lightgrey;
+  text-align: center;
+  height: 150px;
+}
+
+.fellow{
+  background-color: white;
+/*   border: solid black; */
+}
+
+.fellow em {
+  font-size: 18px;
+}
+
+section.fellow h2:nth-of-type(1){
+/*   border: 5px solid blue; */
+  font-size: 32px;
+  margin-top: 58px;
+  color: #686868;
+  display: inline-block;
+}
+
+/* section.fellow h2:nth-of-type(2){
+  text-align: center;
+  border: 5px solid blue;
+  font-size: 18px; 
+  font-style: italic;
+  position: absolute;
+  top: 37% ;
+  right: 5%;
+  translate: translateY(-50%);
+  color: #686868;
+  margin:0 auto;
+} */
+
+article{
+  padding:0 auto;
+}
+.wanted_dead{
+  height: 100%;
+  max-height: auto;
+  padding: 3% 0px 3% 0px;
+  background-color: white;
+/*   border: 5px solid blue; */
+}
+.wanted{
+  display: inline-block;
+/*   margin: 0 auto; */
+  
+  height: 300px;
+  width: 25%;
+  max-width: auto;
+  
+  background-color: lightgrey;
+  margin:0px 2% 0px 2%;
+  
+/*   border: 5px solid blue; */
+}
+
+form{
+/*   border: 5px solid blue; */
+  background-color: white;
+  border-top: 2px solid black;
+  margin: 0 auto;
+}
+
+form h2{
+/*   border: 5px solid blue; */
+  margin: 5px;
+  color: #686868;
+  
+}
+
+input, textarea, select{
+  display: block;
+  margin: 5px;
+  padding: 5px;
+  width: 300px;
+/*   border: 5px solid blue; */
+  max-width: 100%;
+  
+}
+
+form div{
+    padding-left: 150px;
+  
+/*     border: 5px solid blue; */
+/*     height: 200px; */
+    display: block;
+}
+
+
+

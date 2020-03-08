@@ -1,0 +1,135 @@
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+main{
+    width: auto;
+    min-height: 400px;
+    min-width: 400px;
+    background: white;
+    padding: 40px 20px;
+    border-radius: 5px;
+    box-shadow: 5px 55px 50px -20px #b6b6b6;
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+twitter{
+    display: flex;
+    flex-grow: 2;
+}
+
+.twitter li:not(:last-child):not(.twitter__bird) {
+    margin-right: 10px;
+}
+
+.twitter_bird{
+    margin-left: 50%;
+    margin-right: 50%;
+}
+.menu-container {
+    color: #fff;
+    background-color: #5995DA;  /* Blue */
+    padding: 20px 20px;
+    display:flex;
+    justify-content: center;
+ }
+  
+.menu {
+    border: 1px solid #fff;  /* For debugging */
+    width: 900px;
+    padding: 20px;
+    justify-content: space-between;
+    display: flex;
+  }
+
+.link{
+    justify-content: flex-end;
+    display: flex;
+
+  }
+
+.login{
+      margin-left: 20px;
+  }
+
+.header-container{
+    color: #5998DA;
+    background-color: #D6E9FE;
+    display: flex;
+    justify-content: center;
+}
+
+.header{
+    width: 900px;
+    height:300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social, .subscribe{
+    align-self: flex-end;
+    margin-bottom: 20px;
+    display:flex;
+}
+
+.photo-grid-container{
+    display: flex;
+    justify-content: center;
+}
+
+.photo-grid {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+.photo-grid-item {
+    /* border: 1px solid #fff; */
+    width: 300px;
+    height: 300px;
+}
+
+.first-item{
+    order: 1;
+}
+
+.last-item{
+    order: -1;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-item{
+    border: solid;
+    background-color: #256050;
+    flex: 1;
+    height: 200px;
+}
+
+.footer-one, .footer-three{
+    flex: initial;
+    width: 100px;
+    background-color: khaki;
+}
+
+.signup{
+    margin-left: auto;
+}
