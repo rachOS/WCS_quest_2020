@@ -8,3 +8,26 @@ cd2017f adding <main> in the <body>
 4b7eb19 delete README
 548340c adding all the quest > 2020 March 03
 67d475b Initial commit
+ 2124  git commit -m  "adding sharezza-oops/ for the 03-GIT UNDO! quest"
+ 2125  git hist
+ 2126  git push origin master
+ 2127  cd sharezza-oops/
+ 2128  nano index.html 
+ 2129  git status
+ 2130  git add index.html 
+ 2131  git commit -m  "changing the title name in index.html"
+ 2132  git status
+ 2133  nano index.html 
+ 2134  git status
+ 2135  git add index.html 
+ 2136  git commit -m  "adding <main> in the <body>"
+ 2137  git hist
+ 2138  git revert HEAD
+ 2139  git log --oneline > git_log.txt
+ 2140  cat git_log.txt 
+ 2141  git add git_log.txt 
+ 2142  git commit -m "Revert the adding <main> in the <body> commit part"
+ 2143  git push origin master
+ 2144  git status
+ 2145  history
+ 2146  history | tail -n 23 >> git_log.txt 
