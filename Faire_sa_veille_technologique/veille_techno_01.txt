@@ -1,0 +1,10 @@
+# Language dynamique JavaScript
+
+Les bibliothèques JavaScript ne reçoivent presque jamais de màj une fois installées.
+
+Selon le rapport State of JavaScript 2019, JS est le premier langage utilisé sur GitHub (suivi de Python). 
+Mais le constat d'une étude de Cloufare(qui permet d'executer CDNJS, moyen d'inclure du JS et du front sur les pages web) montre que la bibliothèque la plus populaire jQuery, les version antérieures ne serait plus mise à jour. En effet les utilisateur "switchent" vers la version la plus récente. 
+
+source:
+Le 28 janvier 2020 à 17:14, par Stéphane le calme
+https://javascript.developpez.com/actu/291729/Les-bibliotheques-JavaScript-ne-recoivent-presque-jamais-de-mise-a-jour-une-fois-qu-elles-sont-installees-selon-une-enquete-de-Cloudfare/
