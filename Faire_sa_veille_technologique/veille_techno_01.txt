@@ -3,8 +3,28 @@
 Les bibliothèques JavaScript ne reçoivent presque jamais de màj une fois installées.
 
 Selon le rapport State of JavaScript 2019, JS est le premier langage utilisé sur GitHub (suivi de Python). 
-Mais le constat d'une étude de Cloufare(qui permet d'executer CDNJS, moyen d'inclure du JS et du front sur les pages web) montre que la bibliothèque la plus populaire jQuery, les version antérieures ne serait plus mise à jour. En effet les utilisateur "switchent" vers la version la plus récente. 
+Mais le constat d'une étude de Cloufare(qui permet d'executer CDNJS, moyen d'inclure du JS et du front sur les pages web)
+montre que la bibliothèque la plus populaire jQuery, les version antérieures ne serait plus mise à jour.
+En effet les utilisateur "switchent" vers la version la plus récente. 
 
 source:
 Le 28 janvier 2020 à 17:14, par Stéphane le calme
 https://javascript.developpez.com/actu/291729/Les-bibliotheques-JavaScript-ne-recoivent-presque-jamais-de-mise-a-jour-une-fois-qu-elles-sont-installees-selon-une-enquete-de-Cloudfare/
+
+# User eXperience
+
+Des filtres pour optimiser le E-commerce UX.
+Les filtres permettent de présenter une variété de produit plus grande, augmente l'UX et les ventes. Le simple fait de mettre en place les bon filtres augmente la converstion de prospect en client de 26%.
+
+source:
+le 11 mars 2020
+https://uxplanet.org/9-filtering-design-best-practices-to-improve-e-commerce-ux-edac50560f94
+
+# CSS
+
+Foundation est un framework responsive front-end similaire à Bootstrap
+
+source:
+https://get.foundation/
+
+
