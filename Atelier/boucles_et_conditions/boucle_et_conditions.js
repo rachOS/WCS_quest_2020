@@ -19,17 +19,33 @@ for (let j = 0; j <= 100; j += 5){
 // et un second nombre entier, puis qui effectue le calcul ainsi indiqué et affiche le résultat. 
 // (Attention à éviter les divisions par 0)  (switch)
 
-let number1 = 5
-const operator = ''
-let number2 = 5
-let result = 0
+let number1 = 8;
+const operator = '+'
+let number2 = 5;
+let result = 0;
 
 switch(operator){
 
     case "+":
-        result = (number1 ,add ,number2)
+        result = number1 + number2
         console.log(result)
         break
+
+    case "-":
+        result = number1 - number2
+        console.log(result)
+        break
+
+    case "*":
+        result = number1 * number2
+        console.log(result)
+        break
+
+    case "/":
+        result = number1 + number2
+        console.log(result)
+        break
+
     default:
         break
 }
