@@ -37,8 +37,14 @@ function getStringsLength(strings) {
 
 console.log(pizza4Cheese.map(getStringsLength)); // /!\ map() parcours le contenu des index!!! Lorsque la fonction doit être passée dans map()
                                                  // nous n'avons pas besoin déclarer les index dans la fonction 
-                                                 // ex : return `${strings} contain ${strings.length} characters` === console.log(`${pizza4Cheese[0]} contain ${pizza4Cheese[0].length} characters`)
+                                                 // ex : return `${pizza4Cheese} contain ${pizza4Cheese.length} characters` === console.log(`${pizza4Cheese[0]} contain ${pizza4Cheese[0].length} characters`)
+                                                 // en d'autre terme map() remplace la boucle ' for( let i = 0 ; i < array.lenght ; i++)'
 
+
+for( let i = 0 ; i < pizza4Cheese.length; i++){
+  console.log(pizza4Cheese[i],"<=", [i] , "<="," [i] == map()");
+}
+console.log("map() parcours les index d'un ARRAY et attend une fonction en paramètre")
 //===============================================================================================
 
 // If you need, you can always visualize the result with a console.log.
