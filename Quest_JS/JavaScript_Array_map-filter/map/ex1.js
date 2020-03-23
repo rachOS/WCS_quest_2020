@@ -25,9 +25,21 @@ Expected OUTPUT for this sample array:
   ]
 
 */
+const pizza4Cheese = ["tomate","emmental","olive","origan","chèvre","gorgonzolla","mozzarella"]
+
+console.log(`${pizza4Cheese[0]} contain ${pizza4Cheese[0].length} characters`)
 
 function getStringsLength(strings) {
+  
+  return `${strings} contain ${strings.length} characters`
+
 }
+
+console.log(pizza4Cheese.map(getStringsLength)); // /!\ map() parcours le contenu des index!!! Lorsque la fonction doit être passée dans map()
+                                                 // nous n'avons pas besoin déclarer les index dans la fonction 
+                                                 // ex : return `${strings} contain ${strings.length} characters` === console.log(`${pizza4Cheese[0]} contain ${pizza4Cheese[0].length} characters`)
+
+//===============================================================================================
 
 // If you need, you can always visualize the result with a console.log.
 // In that case, uncomment the line below (you can also add your own
