@@ -115,6 +115,12 @@ const nicePrice = pricesWithZero.filter(price => price !==0);
 console.log(goodPrices, "avec la methode filter()")
 console.log(nicePrice, "avec fonction flat-arrow")
 
+const mixedArray = [5, 'keep', true, 'strings', -4, 'only', { a: 'a' }];
+const numberOnly = mixedArray.filter((item) => {
+  return typeof item === 'number';
+});
+console.log(numberOnly, "number only!");
+
 
 
 
