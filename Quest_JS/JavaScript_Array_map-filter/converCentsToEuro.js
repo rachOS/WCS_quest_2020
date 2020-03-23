@@ -102,6 +102,18 @@ for( let i = 0 ; i < pricesWithZero.length ; i++){
   
 }
 
+function priceWithoutZero(price){
+  return price !== 0; 
+}
+
+const goodPrices = pricesWithZero.filter(priceWithoutZero)
+
+//fonction flat-arrow
+
+const nicePrice = pricesWithZero.filter(price => price !==0);
+
+console.log(goodPrices, "avec la methode filter()")
+console.log(nicePrice, "avec fonction flat-arrow")
 
 
 
