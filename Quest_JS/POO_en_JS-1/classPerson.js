@@ -28,11 +28,12 @@ class Person {
     
     tellMyName(){
         console.log(`I am ${this.name}`);
+        //return `I am ${this.name}`;
     }
 
     tellMyAge(){
-
         console.log(`I am ${this.age} years old`);
+        // return `I am ${this.age} years old`;
     }
 
 }
