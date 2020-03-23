@@ -28,12 +28,12 @@ class Person {
     
     tellMyName(){
         console.log(`I am ${this.name}`);
-        //return `I am ${this.name}`;
+        return `I am ${this.name}`;
     }
 
     tellMyAge(){
         console.log(`I am ${this.age} years old`);
-        // return `I am ${this.age} years old`;
+        return `I am ${this.age} years old`;
     }
 
 }
@@ -43,3 +43,5 @@ const name2 = new Person('Mary',35);
 
 console.log(name1.tellMyName(), name1.tellMyAge())
 console.log(name2.tellMyName(), name2.tellMyAge())
+
+/////////////////////////////////////////////////////
