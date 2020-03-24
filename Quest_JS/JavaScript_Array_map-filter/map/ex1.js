@@ -27,11 +27,11 @@ Expected OUTPUT for this sample array:
 */
 const pizza4Cheese = ["tomate","emmental","olive","origan","chèvre","gorgonzolla","mozzarella"]
 
-console.log(`${pizza4Cheese[0]} contain ${pizza4Cheese[0].length} characters`)
+console.log(`${pizza4Cheese[0]} contain ${pizza4Cheese[0].length} characters "TEEEST"`)
 
-function getStringsLength(strings) {
+function getStringsLength(pizza) {
   
-  return `${strings} contain ${strings.length} characters`
+  return `${pizza} contain ${pizza.length} characters`
 
 }
 
@@ -42,7 +42,7 @@ console.log(pizza4Cheese.map(getStringsLength)); // /!\ map() parcours le conten
 
 
 for( let i = 0 ; i < pizza4Cheese.length; i++){
-  console.log(pizza4Cheese[i],"<=", [i] , "<="," [i] == map()");
+  console.log(pizza4Cheese[i],"<=", pizza4Cheese[i].length , "<="," [i] == map()");
 }
 console.log("map() parcours les index d'un ARRAY et attend une fonction en paramètre")
 //===============================================================================================
