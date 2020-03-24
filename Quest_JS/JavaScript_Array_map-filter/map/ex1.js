@@ -57,3 +57,11 @@ console.log("map() parcours les index d'un ARRAY et attend une fonction en param
 
 // DON'T TOUCH THIS!
 module.exports = getStringsLength;
+
+function ajouteDuTexteDansMonIndex(array){
+  return array.concat(" maitrise map()")
+}
+
+const namE = ["Chloe", "Grégory", "David", "Emeline", "Johanna", "etc"]
+
+console.log(namE.map(ajouteDuTexteDansMonIndex))
