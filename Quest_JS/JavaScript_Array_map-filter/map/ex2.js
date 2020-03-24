@@ -43,23 +43,34 @@ Expected OUTPUT for this sample
 */
 
 
-const foodCategory = [
-  
-  {food:"tomato",isVegetarian: true},
-  {food:"salad",isVegetarian: true},
-  {food:"ham",isVegetarian: false},
-  {food:"bread",isVegetarian: true},
-  {food:"chocolat",isVegetarian: false},
+const foods = [
+  {
+    food: 'Bacon',
+    isVegetarian: false
+  },
+  {
+    food: 'Sausage',
+    isVegetarian: false
+  },
+  {
+    food: 'Tofu',
+    isVegetarian: true
+  },
+  {
+    food: 'Chick Pea',
+    isVegetarian: true
+  }
 ]
-function getFoodCategories(foodCategory){
 
-  console.log(Object.values(foodCategory))
+function getFoodCategories(foods){
 
-  //return Object.values(foodCategory)
+  //console.log(Object.values(foods))
+
+  return Object.values(foods);
 }
 
 
-console.log(foodCategory.map(getFoodCategories))
+foods.map(getFoodCategories)
 
 // DON'T TOUCH THIS!
 module.exports = getFoodCategories;

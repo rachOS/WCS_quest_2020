@@ -25,26 +25,33 @@ Expected OUTPUT for this sample array:
   ]
 
 */
-const pizza4Cheese = ["tomate","emmental","olive","origan","chèvre","gorgonzolla","mozzarella"]
+const ingredient = [
 
-console.log(`${pizza4Cheese[0]} contain ${pizza4Cheese[0].length} characters "TEEEST"`)
+  'Chicken',
+  'Bacon',
+  'Tofu',
+  'Mayonnaise'
 
-function getStringsLength(pizza) {
+]
+
+//console.log(`${pizza4Cheese[0]} contain ${pizza4Cheese[0].length} characters "TEEEST"`)
+
+function getStringsLength(food) {
   
-  return `${pizza} contain ${pizza.length} characters`
+  return `${food} contain ${food.length} characters`
 
 }
 
-console.log(pizza4Cheese.map(getStringsLength)); // /!\ map() parcours le contenu des index!!! Lorsque la fonction doit être passée dans map()
+ingredient.map(getStringsLength); // /!\ map() parcours le contenu des index!!! Lorsque la fonction doit être passée dans map()
                                                  // nous n'avons pas besoin déclarer les index dans la fonction 
                                                  // ex : return `${pizza4Cheese} contain ${pizza4Cheese.length} characters` === console.log(`${pizza4Cheese[0]} contain ${pizza4Cheese[0].length} characters`)
                                                  // en d'autre terme map() remplace la boucle ' for( let i = 0 ; i < array.lenght ; i++)'
 
 
-for( let i = 0 ; i < pizza4Cheese.length; i++){
+/* for( let i = 0 ; i < pizza4Cheese.length; i++){
   console.log(pizza4Cheese[i],"<=", pizza4Cheese[i].length , "<="," [i] == map()");
 }
-console.log("map() parcours les index d'un ARRAY et attend une fonction en paramètre")
+console.log("map() parcours les index d'un ARRAY et attend une fonction en paramètre") */
 //===============================================================================================
 
 // If you need, you can always visualize the result with a console.log.
@@ -58,10 +65,10 @@ console.log("map() parcours les index d'un ARRAY et attend une fonction en param
 // DON'T TOUCH THIS!
 module.exports = getStringsLength;
 
-function ajouteDuTexteDansMonIndex(array){
+/* function ajouteDuTexteDansMonIndex(array){
   return array.concat(" maitrise map()")
 }
 
 const namE = ["Chloe", "Grégory", "David", "Emeline", "Johanna", "etc"]
 
-console.log(namE.map(ajouteDuTexteDansMonIndex))
+console.log(namE.map(ajouteDuTexteDansMonIndex)) */
