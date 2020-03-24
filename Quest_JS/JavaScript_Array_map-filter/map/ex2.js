@@ -43,7 +43,7 @@ Expected OUTPUT for this sample
 */
 
 
-const foods = [
+const ingredient = [
   {
     food: 'Bacon',
     isVegetarian: false
@@ -62,15 +62,18 @@ const foods = [
   }
 ]
 
-function getFoodCategories(foods){
 
-  //console.log(Object.values(foods))
+function getFoodCategories(ingredients){
 
-  return Object.values(foods);
+
+  return ingredients.map(ingredients => ingredients['food'])
+
 }
 
+const test = ingredient.map( vegOrNot => `${vegOrNot['food']}  ${vegOrNot['isVegetarian'] === true ? `is suitable for vegetarians` : `is not suitable for vegetarians` }`)
+console.log(test)
 
-foods.map(getFoodCategories)
+console.log(getFoodCategories(ingredient))
 
 // DON'T TOUCH THIS!
 module.exports = getFoodCategories;

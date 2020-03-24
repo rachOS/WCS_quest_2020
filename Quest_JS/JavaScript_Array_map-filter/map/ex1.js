@@ -25,24 +25,19 @@ Expected OUTPUT for this sample array:
   ]
 
 */
-const ingredient = [
-
-  'Chicken',
-  'Bacon',
-  'Tofu',
-  'Mayonnaise'
-
-]
+const ingredient = ['Chicken','Bacon','Tofu','Mayonnaise']
 
 //console.log(`${pizza4Cheese[0]} contain ${pizza4Cheese[0].length} characters "TEEEST"`)
 
 function getStringsLength(food) {
   
-  return `${food} contain ${food.length} characters`
+  //console.log(`${food} contain ${food.length} characters`)
+  return food.map( food => `${food} contains ${food.length} characters`)
 
 }
 
-ingredient.map(getStringsLength); // /!\ map() parcours le contenu des index!!! Lorsque la fonction doit être passée dans map()
+console.log(getStringsLength(ingredient))
+getStringsLength(ingredient); // /!\ map() parcours le contenu des index!!! Lorsque la fonction doit être passée dans map()
                                                  // nous n'avons pas besoin déclarer les index dans la fonction 
                                                  // ex : return `${pizza4Cheese} contain ${pizza4Cheese.length} characters` === console.log(`${pizza4Cheese[0]} contain ${pizza4Cheese[0].length} characters`)
                                                  // en d'autre terme map() remplace la boucle ' for( let i = 0 ; i < array.lenght ; i++)'
