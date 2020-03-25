@@ -63,10 +63,10 @@ const ingredient = [
 ]
 
 
-function getFoodCategories(ingredients){
+function getFoodCategories(flavor){
 
 
-  return ingredients.map(ingredients => ingredients['food'])
+  return flavor.map(flavor => flavor['food'])
 
 }
 
