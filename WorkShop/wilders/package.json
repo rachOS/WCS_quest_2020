@@ -4,13 +4,17 @@
   "description": "\"Créer un projet Node.js et utiliser un package externe\"",
   "main": "index.js",
   "scripts": {
-    "test": "wilders test"
+    "test": "wilders test",
+    "start": "$echo 'Jwana'"
   },
   "repository": {
     "type": "git",
-    "url": "wilder-node-js"
+    "url": "git@github.com:rachOS/WCS_quest_2020.git"
   },
   "keywords": [],
   "author": "rachOS",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "chalk": "^3.0.0"
+  }
 }
