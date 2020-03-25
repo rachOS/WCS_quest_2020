@@ -1,0 +1,23 @@
+{
+  "name": "wilders",
+  "version": "1.0.0",
+  "description": "\"Créer un projet avec nodeJS et utiliser le fichier package.json\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "wilders test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jwana24/wilders-nodeJS.git"
+  },
+  "keywords": [
+    "[]"
+  ],
+  "author": "Johanna Detrieux",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "chalk": "^3.0.0"
+  }
+}
