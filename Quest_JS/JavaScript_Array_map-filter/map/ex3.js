@@ -106,33 +106,64 @@ const myMovies = [
 //console.log(myMovies.map(under60 => under60.rating < 60 ? true : false));
 
 
+function addKey(myArray){
 
-function getMoviesFreshness(myArrayWithObject){
+  const mapInit = myArray => {
+
+    if(myArray.rating < 60){
+
+      myArray.label = 'rotten'
+
+    }else if(myArray.rating > 75){
+
+      myArray.label = 'certified fresh'
+    }else{
+
+      myArray.label = 'fresh'
+    }
+
+    return myArray
+
+  }
+
+  return myArray.map(mapInit)
+
+}
+
+console.log(addKey(myMovies));
 
 
-  const testFunct = myArrayWithObject => {if( myArrayWithObject.rating < 60){
-
-    myArrayWithObject.label = 'rotten';
-
-  }else if (myArrayWithObject.rating > 75){
-
-    myArrayWithObject.label = 'certified fresh';
+function getMoviesFreshness(myArray){
   
-  }else/* (myArrayWithObject.rating >= 60 && myArrayWithObject.rating < 75) */{
+  const mapInit = myArray => {
 
-    myArrayWithObject.label = 'fresh';
-  }}
+  if(myArray.rating < 60){
 
-  return myArrayWithObject.map(testFunct)
-   
+    myArray.label = 'rotten'
+
+  }else if(myArray.rating > 75){
+
+    myArray.label = 'certified fresh'
+    
+  }else{
+
+    myArray.label = 'fresh'
+  }
+
+  return myArray
+
+}
+
+return myArray.map(mapInit)
+
 }
 
 
 
 //console.log(newKey , "test newKey");
-console.log(myMovies, "test myMovies");
+//console.log(myMovies, "test myMovies");
 //console.log(myMovies.map(getMoviesFreshness), "final expected");
-console.log(getMoviesFreshness, "final");
+console.log(getMoviesFreshness(myMovies), "final");
 
 
 // DON'T TOUCH THIS!
