@@ -66,12 +66,12 @@ const ingredient = [
 function getFoodCategories(flavor){
 
 
-  return flavor.map(flavor => flavor['food'])
+  return flavor.map(flavor => `${flavor['food']} ${flavor['isVegetarian'] === true ? `is suitable for vegetarians` : `is not suitable for vegetarians` }`)
 
 }
 
-const test = ingredient.map( vegOrNot => `${vegOrNot['food']}  ${vegOrNot['isVegetarian'] === true ? `is suitable for vegetarians` : `is not suitable for vegetarians` }`)
-console.log(test)
+const test = ingredient.map(vegOrNot => `${vegOrNot['food']}  ${vegOrNot['isVegetarian'] === true ? `is suitable for vegetarians` : `is not suitable for vegetarians` }`)
+//console.log(test)
 
 console.log(getFoodCategories(ingredient))
 

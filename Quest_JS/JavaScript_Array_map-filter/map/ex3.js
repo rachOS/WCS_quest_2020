@@ -61,9 +61,78 @@ Expected OUTPUT for this sample:
 
  */
 
-function getMoviesFreshness(movies) {
+
+
+const myMovies = [
+  {
+    name: 'Crazy Rich Asians',
+    rating: 93
+  },
+  {
+    name: 'Skyscraper',
+    rating: 46
+  },
+  {
+    name: 'Leave No Trace',
+    rating: 100
+  },
+  {
+    name: 'White Boy Rick',
+    rating: 60
+  }
+]
+
+/* function getMoviesFreshness(movies) {
+
+  const newKey = movies.map(addKey => {
+  
+    if( addKey.rating < 60){
+  
+      return addKey.label = 'rotten';
+  
+    }else if (addKey.rating > 75){
+  
+      return addKey.label = 'fresh';
+    
+    }else if (addKey.rating >= 60 && addKey.rating <= 75){
+  
+      return addKey.label = 'certified fresh';
+    }
+  }
+  )
+} */
+//console.log(myMovies.label)
+//console.log(myMovies[1].rating < 60);
+//console.log(myMovies.map(under60 => under60.rating < 60 ? true : false));
+
+
+
+function getMoviesFreshness(myArrayWithObject){
+
+
+  const testFunct = myArrayWithObject => {if( myArrayWithObject.rating < 60){
+
+    myArrayWithObject.label = 'rotten';
+
+  }else if (myArrayWithObject.rating > 75){
+
+    myArrayWithObject.label = 'certified fresh';
+  
+  }else/* (myArrayWithObject.rating >= 60 && myArrayWithObject.rating < 75) */{
+
+    myArrayWithObject.label = 'fresh';
+  }}
+
+  return myArrayWithObject.map(testFunct)
+   
 }
 
+
+
+//console.log(newKey , "test newKey");
+console.log(myMovies, "test myMovies");
+//console.log(myMovies.map(getMoviesFreshness), "final expected");
+console.log(getMoviesFreshness, "final");
 
 
 // DON'T TOUCH THIS!
