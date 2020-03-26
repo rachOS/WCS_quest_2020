@@ -13,9 +13,20 @@ Expected OUTPUT for this sample:
 
 */
 
-function getPositiveNumbers(numbers) {
+const unfilteredNumbers = [7, -4, 2, 0, -10, 3, 11]
+
+function getPositiveNumbers(numbers){
+
+  const delNegNumber =  number => {
+
+    return number >= 0
+
+  } 
+  
+  return numbers.filter(delNegNumber)
 }
 
+console.log(getPositiveNumbers(unfilteredNumbers))
 // If you need, you can always visualize the result with a console.log.
 // In that case, uncomment the line below (you can also add your own
 // console.log INSIDE the function).
