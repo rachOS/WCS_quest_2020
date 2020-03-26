@@ -27,6 +27,7 @@ Expected OUTPUT for this sample:
 
 function keepStarks(names) {
 }
+console.log();
 
 // DON'T TOUCH THIS!
 module.exports = keepStarks;
