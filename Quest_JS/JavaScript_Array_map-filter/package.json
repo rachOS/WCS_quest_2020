@@ -1,0 +1,18 @@
+{
+  "name": "javascript_array_map-filter",
+  "version": "1.0.0",
+  "description": "[FRENCH VERSION (a bit less detailed)](README_FR.md)",
+  "main": "converCentsToEuro.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^7.1.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
+}
