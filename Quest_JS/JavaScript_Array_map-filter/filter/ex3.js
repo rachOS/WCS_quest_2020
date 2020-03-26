@@ -32,8 +32,26 @@ Expected OUTPUT for these sample arguments:
   ]
 */
 
+const phones = [
+  { name: 'iPhone X', price: 1159 },
+  { name: 'Xiaomi Mi A2', price: 209 },
+  { name: 'Samsung Galaxy Note 9', price: 992 },
+  { name: 'Huawei P20', price: 480 },
+  { name: 'Huawei P20 Pro', price: 649 }
+]
+
+const price = 500
+
 function filterOnPrice(products, maxPrice) {
+
+  //const under500 = products => products.price <= maxPrice;
+
+  return products.filter(products => products.price <= maxPrice)
 }
 
+
+console.log(phones[1].price <= price)
+
+console.log(filterOnPrice(phones,price))
 // DON'T TOUCH THIS!
 module.exports = filterOnPrice;
