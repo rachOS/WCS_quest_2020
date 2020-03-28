@@ -36,6 +36,11 @@ function getStringsLength(food) {
 
 }
 
+console.log(typeof (100));
+
+
+
+
 console.log(getStringsLength(ingredient))
 getStringsLength(ingredient); // /!\ map() parcours le contenu des index!!! Lorsque la fonction doit être passée dans map()
                                                  // nous n'avons pas besoin déclarer les index dans la fonction 
