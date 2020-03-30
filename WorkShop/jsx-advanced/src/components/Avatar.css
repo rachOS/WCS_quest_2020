@@ -1,0 +1,28 @@
+
+.global{
+    font-family: 'Courier New', Courier, monospace;
+    width: 50%;
+    background-color: rgb(163, 163, 168);
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.avatar{
+
+    height: 64px; 
+    width: 64px;
+}
+
+.name{
+    display: flex;
+    margin: 5px;
+    /* border: solid 1px; */
+}
+
+.quote{
+    color: rgb(65, 65, 65);
+    font-weight: bolder;
+    margin: 5px;
+    /* border: solid 1px; */
+}
