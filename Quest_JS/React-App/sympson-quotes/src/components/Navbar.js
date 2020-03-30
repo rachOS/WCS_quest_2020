@@ -3,7 +3,7 @@ import './Navbar.css';
 
 function Navbar(){
     return (
-        <nav className="Navbar"><a href="https://fr.wikipedia.org/wiki/Les_Simpson">Simpsons Quotes</a></nav>
+        <nav className="Navbar"><a href="https://en.wikiquote.org/wiki/The_Terminator">Terminator quotes</a></nav>
     )
 }
 
