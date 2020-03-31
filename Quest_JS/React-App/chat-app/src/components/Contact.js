@@ -4,8 +4,6 @@ import PropType from 'prop-types'
 
 function Contact(props){
 
-
-
     return(
         <div className="Contact">
         
