@@ -1,5 +1,6 @@
 .QuoteCard {
     display: flex;
+    justify-content: center;
     padding: 1.25em;
     width: 400px;
     border: 1px solid #f8f8f8;
@@ -8,12 +9,14 @@
     font-size: 1.2em;
   }
   
-.QuoteCard img {
+.QuoteCard .img {
 display: flex;
-max-height: 120px;
+height: 64px;
+width: auto;
 margin-right: 1.5rem;
 }
 
-.QuoteCard blockquote {
+.QuoteCard .blockquote {
 margin: 0 0 1rem 0;
+font: black;
 }
