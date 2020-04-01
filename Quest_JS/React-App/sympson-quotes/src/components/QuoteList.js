@@ -1,12 +1,11 @@
 import React from 'react';
 import QuotesCard from './QuotesCard';
-import './QuotesCard.css';
 import PropTypes from 'prop-types';
 
 
 
 
-function QuotesList(props){ 
+function QuotesList(){ 
    
     const quotes = [
         {name : "T-800" ,
@@ -26,13 +25,8 @@ function QuotesList(props){
     ]
     
     return (
-       <div className="QuoteCard">
-               {/* {quotes.map( img => <img className="img" src={img.image} alt={img.name} key={img.quote}/>)} */}
-           <ul> 
-               {/* {quotes.map( mod => <li className="blockquote" key={mod.quote}>{mod.model} </li>)} */}
-               {quotes.map( item =>  <li><QuotesCard image={item.image} quote={item.quote} character={item.name}/></li>)}
-           </ul>
-           
+        <div className="">
+            {quotes.map( item =>  <QuotesCard image={item.image} quote={item.quote} character={item.name}/>)}
         </div>
     )
 }
