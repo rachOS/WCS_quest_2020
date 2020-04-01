@@ -25,18 +25,18 @@
   align-items: flex-end;
 }
 
-.QuoteCard figcaption p span {
+/* .QuoteCard figcaption p span {
   color: #eee;
 }
 
 .QuoteCard figcaption p span.is-favorite {
   color: #ecc94b;
-}
+} */
 
 .fav{
-  background-color: #ecc94b;
+  color: #eee;
 }
 
 .unfav{
-  background-color: red;
+  color: red;
 }
