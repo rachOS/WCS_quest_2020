@@ -1,55 +1,47 @@
-import React from 'react';
+import React, {Component} from 'react';
 import "./Contact.css"
+//import { ReactComponent } from '*.svg';
 
 
 
-function Contact(){
+class Contact extends React.Component{ // convertir en Class
+                    // creer un contructor et initialiser un state {onlin : false}
+                    // au  clic sur le status modifie le state du online 
+                    // et change le css + le texte selon un rendu conditionnel
+  constructor(props){
+    super(props)
+    this.state = {online: false}
+  }
 
-    const users = [
-        {
-          name: 'Robert Reyes',
-          avatar: 'https://randomuser.me/api/portraits/men/28.jpg',
-          online: false
-        },
-        {
-          name: 'Nellie Caldwell',
-          avatar: 'https://randomuser.me/api/portraits/women/17.jpg',
-          online: true
-        },
-        {
-          name: 'Vernon Mason',
-          avatar: 'https://randomuser.me/api/portraits/men/84.jpg',
-          online: true
-        },
-        {
-          name: 'Erica Hunt',
-          avatar: 'https://randomuser.me/api/portraits/women/87.jpg',
-          online: false
-        },
-        {
-          name: 'Juanita Phillips',
-          avatar: 'https://randomuser.me/api/portraits/women/55.jpg',
-          online: true
-        }
-      ];
-    
-    return <div className="Contact">
-        
-          <div className="status">
-            <div className="status-text">
-              {users.map ( index => <li className="name">{index.name}</li>)}
-            </div>
+  isOnline = event => this.state.online ? this.setState({online: false}) : this.setState({online: true});
+
+  render(){
+
+    return (
+      <div className="Contact">
+
+            <ul className="status">
+
+              <li className="name">
+                <p>
+                  {this.props.name}
+                </p>
+
+                <img className="avatar" src={this.props.avatar} />
+                
+                <span onClick={this.isOnline} className={ this.state.online ? "status-online" : "status-offline"}>
+                </span>
+
+                <p>
+                  {this.props.online ? "online" : "offline"}
+                  {/* <button >Change status</button> */}
+                </p>
+
+              </li>
+            </ul>
             
-        	  <div>{users.map (
-            index => index.online ?
-            
-            <ul><li><img className="avatar" src={index.avatar}/></li><li className="status-online" ></li><p>online</p></ul>
-            :
-            <ul><li><img className="avatar" src={index.avatar}/></li><li className="status-offline"></li><p>offline</p></ul>)}
-            </div>
-          </div>
-        
-    </div>
+      </div>)
+  }
 }
 
 export default Contact;
