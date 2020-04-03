@@ -27,10 +27,10 @@ function theaterSieges() {
 
         i++
         column.push(i);
-        row.push(i);
+        // row.push(i);
     }
 
-    while (row.length < 100){
+    while (row.length < 100-26){
 
         i++
         row.push(i);

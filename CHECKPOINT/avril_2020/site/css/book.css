@@ -7,8 +7,12 @@ body {
 }
 
 main {
+    /* width: 1200px; */
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
     padding-top: 4em;
-    font-size: 26pt;
+    /* font-size: 26pt; */
     font-family: 'Bilbo Swash Caps', cursive;
 }
 
@@ -18,7 +22,8 @@ main {
 
 .pages {
     display: flex;
-    width: auto;
+    /* width: fit-content; */
+    /* max-width: 100%; */
     flex-basis : 65%;
     margin:1em;
 }
@@ -31,12 +36,107 @@ main {
 }
 
 .leftpage {
+    display: flex;
+    flex-direction: column;
     background: url('../image/paper.png'), linear-gradient(270deg, rgba(157,158,137,1) 0%, rgba(233,226,187,1) 5%, rgba(255,251,203,1) 18%);
     border-radius: 24px 40% 40% 24px/8px 8px 8px 8px;
 }
 
 .rightpage {
+    display: flex;
+    padding: auto;
+    /* height: 494.2px; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     background: url('../image/paper.png'), linear-gradient(90deg, rgba(157,158,137,1) 0%, rgba(233,226,187,1) 5%, rgba(255,251,203,1) 18%);
     border-radius:  40% 24px 24px 40%/8px 8px 8px 8px;
     overflow: auto;
+}
+
+section.desktop {
+    display: flex;
+    width: 250vh;
+    /* max-width: 100%; */
+}
+img.whisky {
+    height: fit-content;
+}
+
+hr{
+    width: 230px;
+    float: right;
+    display: inline-block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    align-self: auto;
+    background: black;
+}
+
+ul{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    width: 350px;
+    margin: 6px;
+    list-style: none;
+    /* height: auto; */
+    text-align: right;
+}
+
+.gangsta, .prices{
+    display: flex;
+    /* width: max-content; */
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+li{
+    text-align: right;
+}
+
+.hrS{
+    width: 100%;
+}
+
+.hrT{
+    float: initial;
+    width: 50%;
+    margin: 15px 0px 15px 0px;
+}
+
+.hrT, .hrS {
+    border: none;
+    background: #040403;
+    height: 1px;
+}
+form{
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    height: 150px;
+}
+
+button{
+    width: 50px;
+    background-color: rgb(244, 245, 244);
+    border: none;
+    height: 20px;
+    border-radius: 10%;
+    align-self: flex-end;
+}
+
+input, select{
+    width: max-content;
+    border: none;
+    width: auto;
+    background: white;
+    border-radius: 10%;
 }
