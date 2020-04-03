@@ -70,8 +70,8 @@ code {
 }
 
 h3 {
-    /* width: 150px; */
-    /* align-self: center; */
+    width: max-content;
+    align-self: center;
     margin: 5px;
     font: initial;
     font-size: xx-large;
