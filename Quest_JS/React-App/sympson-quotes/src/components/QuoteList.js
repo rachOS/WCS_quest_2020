@@ -1,6 +1,6 @@
 import React from 'react';
 import QuotesCard from './QuotesCard';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
 
 
