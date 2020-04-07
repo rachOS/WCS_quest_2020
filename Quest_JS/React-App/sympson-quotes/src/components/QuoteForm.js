@@ -33,7 +33,8 @@ class QuoteForm extends React.Component {
 
             <label  htmlFor="character">Character:</label>
 
-            <input className={ this.state.character.length < MAX_LENGHT ? "length-ok" : "length-maximum-reached"} id="character" name="character" type="text" value={this.state.character}
+            <input className={ this.state.character.length < MAX_LENGHT ? "length-ok" : "length-maximum-reached"} 
+                id="character" name="character" type="text" value={this.state.character}
                 /* onChange={(event) => {
                 const input = event.target;
                 console.log('NAME:', input.name, 'VALUE:', input.value);
