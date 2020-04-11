@@ -1,0 +1,60 @@
+
+> javascript_array_map-filter@1.0.0 test /home/rach/Documents/WILD CODE SCHOOL/WCS_quest_2020/Quest_JS/JavaScript_Array_map-filter
+> mocha
+
+[ 7, 2, 0, 3, 11 ]
+true
+[ 'Bran Stark', 'Arya Stark', 'Sansa Stark' ]
+true
+[
+  { name: 'Xiaomi Mi A2', price: 209 },
+  { name: 'Huawei P20', price: 480 }
+]
+[
+  'Chicken contains 7 characters',
+  'Bacon contains 5 characters',
+  'Tofu contains 4 characters',
+  'Mayonnaise contains 10 characters'
+]
+[
+  'Bacon is not suitable for vegetarians',
+  'Sausage is not suitable for vegetarians',
+  'Tofu is suitable for vegetarians',
+  'Chick Pea is suitable for vegetarians'
+]
+[
+  { name: 'Crazy Rich Asians', rating: 93, label: 'certified fresh' },
+  { name: 'Skyscraper', rating: 46, label: 'rotten' },
+  { name: 'Leave No Trace', rating: 100, label: 'certified fresh' },
+  { name: 'White Boy Rick', rating: 60, label: 'fresh' }
+]
+[
+  { name: 'Crazy Rich Asians', rating: 93, label: 'certified fresh' },
+  { name: 'Skyscraper', rating: 46, label: 'rotten' },
+  { name: 'Leave No Trace', rating: 100, label: 'certified fresh' },
+  { name: 'White Boy Rick', rating: 60, label: 'fresh' }
+] final
+
+
+  filter - exercice 1
+    ✓ getPositiveNumbers
+
+  filter - exercice 2
+    ✓ keepStarks
+
+  filter - exercice 3
+    ✓ filterOnPrice (price <= 500)
+    ✓ filterOnPrice (price <= 649)
+
+  map - exercice 1
+    ✓ getStringsLength
+
+  map - exercice 2
+    ✓ getFoodCategories
+
+  map - exercice 3
+    ✓ getMoviesFreshness
+
+
+  7 passing (6ms)
+
