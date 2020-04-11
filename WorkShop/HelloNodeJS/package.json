@@ -1,0 +1,26 @@
+{
+  "name": "workshop",
+  "version": "1.0.0",
+  "description": "utiliser le package http de Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test",
+    "start" : "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rachOS/WCS_quest_2020.git"
+  },
+  "keywords": [
+    "[]"
+  ],
+  "author": "Myself",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rachOS/WCS_quest_2020/issues"
+  },
+  "homepage": "https://github.com/rachOS/WCS_quest_2020#readme",
+  "devDependencies": {
+    "http": "0.0.1-security"
+  }
+}
