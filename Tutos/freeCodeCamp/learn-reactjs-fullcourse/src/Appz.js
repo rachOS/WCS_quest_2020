@@ -1,7 +1,6 @@
 import React from 'react'
-import Test from './components/Test'
-import FilteredChar from './components/data/FilterChar'
-import dbzCharMap from './components/data/MappingChar'
+import FilteredChar from './components/DBZ/FilterChar'
+import dbzCharMap from './components/DBZ/MappingChar'
 
 // data
 
@@ -9,7 +8,7 @@ function Appz(){
 
     return(
         <div>
-            {dbzCharMap}
+            {/* {dbzCharMap} */}
             {/* <FilteredChar /> */}
 
         </div>

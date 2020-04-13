@@ -1,6 +1,6 @@
 import React from 'react'
-import dbzCharData from './dbzCharData'
-import DbzCharacter from '../DbzCharacter';
+import dbzCharData from '../data/dbz/dbzCharData'
+import DbzCharacter from './DbzCharacter';
 
 
 

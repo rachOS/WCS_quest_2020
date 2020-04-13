@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: beige;  
+  color: rgb(68, 68, 62);  
 }
 
 code {
@@ -36,4 +36,12 @@ ul{
   padding: 5px;
   width: 128px;
   height: auto;
+}
+
+form{
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  background-color: cadetblue;
+  color: black;
 }
