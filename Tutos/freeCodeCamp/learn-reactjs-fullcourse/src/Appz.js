@@ -10,6 +10,8 @@ function Appz(){
     return(
         <div>
             {dbzCharMap}
+            {/* <FilteredChar /> */}
+
         </div>
     )
 }
