@@ -27,24 +27,38 @@ const sampleEmployee = {
 class App extends React.Component{
    constructor(props){
      super(props);
-     this.state = {employee: sampleEmployee};
+     this.state = {employee: null};
      this.getEmployee = this.getEmployee.bind(this);
    };
 
+  componentDidMount(){
+    setTimeout(() => {
+    this.getEmployee()
+      
+    }, this.timeout = 3000);
+  
+  }
+
   getEmployee(){
     axios.get('https://randomuser.me/api')
-      .then(response => response.data)
-      .then(data =>{
-        console.log(data);
-        
-        this.setState({employee: data.results[0]})
-      });
+    .then(response => response.data)
+    .then(data =>{
+      console.log(data);
+      
+      this.setState({employee: data.results[0]})
+    });
   };
 
   render(){
     return (
     <div className="App">
-      <DisplayEmployees employee={this.state.employee}/>
+      {
+        this.state.employee ? 
+          <DisplayEmployees employee={this.state.employee}/> 
+          : 
+          <p class="loading">Loading&#8230;</p>
+      }
+      
       <button type="button" onClick={this.getEmployee}>Get employee</button>
     </div>
     );

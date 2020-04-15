@@ -1,18 +1,28 @@
-import React from 'react'
-import todoData from '../../components/data/todo/TodoData'
+import React from 'react';
 
 class Todo extends React.Component{
 
-    creatForm(){
+    constructor(props){
+        super(props)
+    }
+
+
+    myMethod(){
+        
+        const test = 1 + 2
 
         return(
-            <div>TEST</div>
+            test
         )
+        
     }
 
     render(){
-        return (
-            <div>TEST</div>
+        return(
+            <p>
+                paragraph
+                {this.myMethod}
+            </p>
         )
     }
 }

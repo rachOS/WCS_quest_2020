@@ -1,11 +1,38 @@
 import React from 'react';
-import Todo from './components/TODO/Todo'
+import Dojo from './components/Dojo';
 
-function App(){
+function App(){ // version fonction
+    // const scores = [
+    //     {
+    //         player: "Maggie",
+    //         score: 762
+    //     },
+    //     {
+    //         player: "Annie",
+    //         score: 102
+    //     },
+    //     {
+    //         player: "Sanchez",
+    //         score: 882
+    //     },
+    //     {
+    //         player: "Dee",
+    //         score: 609
+    //     }
+    // ];
 
-    return (
-        <Todo/>
+    // const updatesScore = (names, number) => {
+    //     scores.filter(user => user.player === name).map(user => user.score += number)
+    // }
+
+    // updatesScores("Sanchez", 100)
+
+    return(
+        <div>
+            <Dojo />
+            {/* <button onClick={() => updatesScores}></button> */}
+        </div>
     )
 }
 
-export default App; 
+export default App;
