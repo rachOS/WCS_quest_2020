@@ -3,10 +3,22 @@ import './todo-item.css'
 
 export default function TodoItem(props) {
 
+    const ids = props.keys.map( id => id)
+    const generateList = (prop) => {
 
-    const generateList = (props) => {
-        const todoStatus = props.status.map(status => <li className="list"><input className="checkbox" type="checkbox" checked={status} /></li>)
-        const todoTask = props.task.map(task => <li className="list">{task}</li>)
+        const todoStatus = prop.status
+            .map(status => <li
+                key={props.keys}
+                className="list">
+                <input
+                    className="checkbox"
+                    type="checkbox"
+                    onChange={() => props.handleChange(ids.map(i=>i))}
+                    checked={status} />
+            </li>)
+
+        const todoTask = prop.task
+            .map(task => <li key={props.keys} className="list">{task}</li>)
 
         return (
             <div className="total-list">
@@ -20,7 +32,7 @@ export default function TodoItem(props) {
         )
     }
 
-    console.log(typeof props)
+    console.log(ids,"items")
     return (
         <>
             {generateList(props)}

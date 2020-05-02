@@ -7,9 +7,10 @@ export default function TodoList(props) {
     return (
         <div className="todo-list">
             <TodoItem
-                key={props.key}
+                keys={props.keys}
                 status={props.checked}
-                task={props.task} />
+                task={props.task} 
+                handleChange={props.handleChange}/>
         </div>
     )
 }

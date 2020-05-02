@@ -3,18 +3,29 @@ import TodoList from './components/TodoList'
 import datas from './files/data'
 import './App.css';
 
-function App() {
+class App extends React.Component {
 
-  const todoTask = datas.map(item => item.task)
-  const todoID = datas.map(item => item.id)
-  const todoCompleted = datas.map(item => item.completed)
+  state = { todos: datas }
 
+  handleChange = (id) => {
 
-  return (
-    <>
-      <TodoList key={todoID} task={todoTask} checked={todoCompleted} />
-    </>
-  );
+    console.log(" it works",id,datas)
+  }
+
+  render() {
+    console.log(this.state.todos.map( i => i.id), "render");
+
+    const ids = datas.map(item => item.id)
+    const todoID = ids.map(item => item.id)
+    const todoTask = datas.map(item => item.task)
+    const todoCompleted = datas.map(item => item.completed)
+
+    return (
+      <>
+        <TodoList keys={todoID} task={todoTask} checked={todoCompleted} handleChange={this.handleChange}/>
+      </>
+    );
+  }
 }
 
 export default App;

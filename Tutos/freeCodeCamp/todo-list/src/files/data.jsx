@@ -19,7 +19,7 @@ const todos = [
     },
     {
         id:4,
-        completed: false,
+        completed: true,
         task: 'spleep'
 
     },
