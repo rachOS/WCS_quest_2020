@@ -1,0 +1,30 @@
+.list{
+    list-style: none;
+    border: 1px solid red;
+    margin: 10px;
+    text-align: left;
+    display: flex;
+    flex-wrap: nowrap;
+    width: auto;
+    height: 32px;
+    align-items: center;
+}
+
+.checkbox{
+    border-radius: 50%;
+    color: aqua;
+}
+
+.list-handler{
+    display: flex;
+    justify-content: flex-start;
+    border: solid goldenrod;
+    padding: 0;
+    align-content: center;
+    flex-direction: column;
+}
+
+.total-list{
+    border: cadetblue solid 1px;
+    display: flex;
+}
