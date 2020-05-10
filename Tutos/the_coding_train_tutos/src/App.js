@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import './App.css';
+import Test from './Test'
 
 class App extends React.Component {
 
@@ -22,6 +23,7 @@ class App extends React.Component {
           <div>
               test
               {this.test()}
+              <Test/>
           </div>
       );
   }
