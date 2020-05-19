@@ -17,11 +17,11 @@ class FormEmployee extends Component {
     }
 
     submitForm = (e) => {
-        const url = 'https://post-a-form.herokuapp.com/api/movies/'
+        const url = 'https://post-a-form.herokuapp.com/api/employees'
         Axios.post(url, this.state)
             .then(res => res.data)
-            .then(data => {
-                alert(`Employé ajouté avec l'ID ${data.id} !`);
+            .then(res => {
+                alert(`Employé ajouté avec l'ID ${res.id} !`);
             })
             .catch(e => {
                 console.error(e);

@@ -20,18 +20,21 @@ class FormMovies extends React.Component {
     }
 
     submitForm = (e) => {
-        e.prevenDefault()
-        const url = "https://post-a-form.herokuapp.com/api/movies/"
+        e.preventDefault()
+        const url = "https://post-a-form.herokuapp.com/api/movies"
         Axios.post(url, this.state)
             .then(response => response.data)
             .then(response => { alert(`Your form is correctly send to ${response.id}`) })
-            .catch(e => { alert(`WTF is happening: ${e.message}`) })
+            .catch(e =>
+                { console.error(e)
+                alert(`WTF is happening: ${e.message}`) }
+                )
     }
 
     render() {
         return (
             <>
-                <form action="" method="post" name="favMovies">
+                <form  method="post" name="favMovies" onSubmit={this.submitForm}>
                     <fieldset>
                         <legend>Your favorite movies</legend>
                         <div>
@@ -72,7 +75,7 @@ class FormMovies extends React.Component {
                             <input
                                 type="submit"
                                 value="send"
-                                onSubmit={this.submitForm}
+
                             />
                         </div>
                     </fieldset>
