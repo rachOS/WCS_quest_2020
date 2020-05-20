@@ -1,0 +1,103 @@
+<pre>MariaDB [wild_db_quest]&gt; INSERT INTO school (name,country,capacity) VALUES(&apos;Beauxbatons Academy of Magic&apos;,&apos;France&apos;,550), (&apos;Castelobruxo&apos;,&apos;Brazil&apos;,380), (&apos;Durmstrang Institute&apos;,&apos;Norway&apos;,570), (&apos;Hogwarts School of Witchcraft and Wizardry&apos;,&apos;UK&apos;,450), (&apos;Ilvermorny School of Witchcraft and Wizardry&apos;,&apos;USA&apos;,300), (&apos;Koldovstoretz&apos;,&apos;Russia&apos;,125), (&apos;Mahoutokoro School of Magic&apos;,&apos;Japan&apos;,800), (&apos;Uagadou School of Magic&apos;,&apos;Uganda&apos;,350);
+    <b>Query OK, 8 rows affected (0.025 sec)</b>
+    <b>Records: 8  Duplicates: 0  Warnings: 0</b>
+
+    MariaDB [wild_db_quest]&gt; SELECT * FROM school
+        -&gt; ;
+    +----+----------------------------------------------+----------+---------+
+    | id | name                                         | capacity | country |
+    +----+----------------------------------------------+----------+---------+
+    | 10 | Beauxbatons Academy of Magic                 |      550 | France  |
+    | 11 | Castelobruxo                                 |      380 | Brazil  |
+    | 12 | Durmstrang Institute                         |      570 | Norway  |
+    | 13 | Hogwarts School of Witchcraft and Wizardry   |      450 | UK      |
+    | 14 | Ilvermorny School of Witchcraft and Wizardry |      300 | USA     |
+    | 15 | Koldovstoretz                                |      125 | Russia  |
+    | 16 | Mahoutokoro School of Magic                  |      800 | Japan   |
+    | 17 | Uagadou School of Magic                      |      350 | Uganda  |
+    +----+----------------------------------------------+----------+---------+
+    <b>8 rows in set (0.000 sec)</b>
+    </pre>
+
+<!-- “Durmstrang Institute” est en réalité en Suède (Sweden), modifie son pays. -->
+
+
+<pre>MariaDB [wild_db_quest]&gt; UPDATE school
+        -&gt; SET country = &apos;Sweden&apos;
+        -&gt; WHERE  country
+        -&gt; LIKE &apos;Norway&apos;;
+    <b>Query OK, 1 row affected (0.041 sec)</b>
+    <b>Rows matched: 1  Changed: 1  Warnings: 0</b>
+
+    MariaDB [wild_db_quest]&gt; SELECT * FROM school;
+    +----+----------------------------------------------+----------+---------+
+    | id | name                                         | capacity | country |
+    +----+----------------------------------------------+----------+---------+
+    | 10 | Beauxbatons Academy of Magic                 |      550 | France  |
+    | 11 | Castelobruxo                                 |      380 | Brazil  |
+    | 12 | Durmstrang Institute                         |      570 | Sweden  |
+    | 13 | Hogwarts School of Witchcraft and Wizardry   |      450 | UK      |
+    | 14 | Ilvermorny School of Witchcraft and Wizardry |      300 | USA     |
+    | 15 | Koldovstoretz                                |      125 | Russia  |
+    | 16 | Mahoutokoro School of Magic                  |      800 | Japan   |
+    | 17 | Uagadou School of Magic                      |      350 | Uganda  |
+    +----+----------------------------------------------+----------+---------+
+    <b>8 rows in set (0.000 sec)</b></pre>
+
+<!-- “Mahoutokoro School of Magic” passe à une capacité de 700 -->
+
+<pre>MariaDB [wild_db_quest]&gt; UPDATE school
+        -&gt; SET capacity = 700
+        -&gt; WHERE name = &apos;Mahoutokoro School of Magic &apos;;
+        <b>Query OK, 1 row affected (0.036 sec)</b>
+        <b>Rows matched: 1  Changed: 1  Warnings: 0</b>
+
+        MariaDB [wild_db_quest]&gt; SELECT * FROM school;
+        +----+----------------------------------------------+----------+---------+
+        | id | name                                         | capacity | country |
+        +----+----------------------------------------------+----------+---------+
+        | 10 | Beauxbatons Academy of Magic                 |      550 | France  |
+        | 11 | Castelobruxo                                 |      380 | Brazil  |
+        | 12 | Durmstrang Institute                         |      570 | Sweden  |
+        | 13 | Hogwarts School of Witchcraft and Wizardry   |      450 | UK      |
+        | 14 | Ilvermorny School of Witchcraft and Wizardry |      300 | USA     |
+        | 15 | Koldovstoretz                                |      125 | Russia  |
+        | 16 | Mahoutokoro School of Magic                  |      700 | Japan   |
+        | 17 | Uagadou School of Magic                      |      350 | Uganda  |
+        +----+----------------------------------------------+----------+---------+
+        <b>8 rows in set (0.000 sec)</b>
+        </pre>
+
+<!-- Supprime en une seule requête toutes les écoles comportant “Magic” dans leur nom (il y en a 3). Tu peux t’aider du mot clé LIKE -->
+
+<pre>MariaDB [wild_db_quest]&gt; DELETE FROM school
+            -&gt; WHERE name
+            -&gt; LIKE &apos;%magic%&apos;
+            -&gt; ;
+        <b>Query OK, 3 rows affected (0.036 sec)</b>
+
+        MariaDB [wild_db_quest]&gt; SELECT * FROM school;
+        +----+----------------------------------------------+----------+---------+
+        | id | name                                         | capacity | country |
+        +----+----------------------------------------------+----------+---------+
+        | 11 | Castelobruxo                                 |      380 | Brazil  |
+        | 12 | Durmstrang Institute                         |      570 | Sweden  |
+        | 13 | Hogwarts School of Witchcraft and Wizardry   |      450 | UK      |
+        | 14 | Ilvermorny School of Witchcraft and Wizardry |      300 | USA     |
+        | 15 | Koldovstoretz                                |      125 | Russia  |
+        +----+----------------------------------------------+----------+---------+
+        <b>5 rows in set (0.023 sec)</b></pre>
+
+<!-- Ensuite, affiche via une requête SELECT toutes les données de la table school et colle également le résultat dans le Gist. -->
+
+<pre>MariaDB [wild_db_quest]&gt; SELECT * FROM school;
+    +----+----------------------------------------------+----------+---------+
+    | id | name                                         | capacity | country |
+    +----+----------------------------------------------+----------+---------+
+    | 11 | Castelobruxo                                 |      380 | Brazil  |
+    | 12 | Durmstrang Institute                         |      570 | Sweden  |
+    | 13 | Hogwarts School of Witchcraft and Wizardry   |      450 | UK      |
+    | 14 | Ilvermorny School of Witchcraft and Wizardry |      300 | USA     |
+    | 15 | Koldovstoretz                                |      125 | Russia  |
+    +----+----------------------------------------------+----------+---------+
+    <b>5 rows in set (0.023 sec)</b></pre>
