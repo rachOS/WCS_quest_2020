@@ -8,17 +8,17 @@
 <b>2 rows in set (0.000 sec)</b>
 
 MariaDB [wild_db_quest]&gt; DESCRIBE wizard ;
-+-------------+--------------+------+-----+---------+----------------+
-| Field       | Type         | Null | Key | Default | Extra          |
-+-------------+--------------+------+-----+---------+----------------+
-| id          | int(11)      | NO   | PRI | NULL    | auto_increment |
-| firstname   | varchar(100) | NO   |     | NULL    |                |
-| lastname    | varchar(100) | NO   |     | NULL    |                |
-| birthday    | date         | NO   |     | NULL    |                |
-| birth_place | varchar(255) | YES  |     | NULL    |                |
-| biography   | text         | YES  |     | NULL    |                |
-| is_muggle   | tinyint(1)   | YES  |     | NULL    |                |
-+-------------+--------------+------+-----+---------+----------------+
++-------------+--------------+------+-----+-------------+----------------+
+| Field       | Type         | Null | Key | Default     | Extra          |
++-------------+--------------+------+-----+-------------+----------------+
+| id          | int(11)      | NO   | PRI | NULL        | auto_increment |
+| firstname   | varchar(100) | NO   |     | NULL        |                |
+| lastname    | varchar(100) | NO   |     | NULL        |                |
+| birthday    | date         | NO   |     | NULL        |                |
+| birth_place | varchar(255) | YES  |     | NULL        |                |
+| biography   | text         | YES  |     | NULL        |                |
+| is_muggle   | tinyint(1)   | YES  |     | NOT NULL    |                |
++-------------+--------------+------+-----+-------------+----------------+
 <b>7 rows in set (0.001 sec)</b>
 
 MariaDB [wild_db_quest]&gt; DESCRIBE school;

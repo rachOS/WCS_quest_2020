@@ -66,4 +66,18 @@
 <b>1 row in set (0.000 sec)</b>
 </pre>
 
-
+<pre>MariaDB [wild_db_quest]&gt; SELECT * FROM wizard WHERE birthday BETWEEN &apos;1975-01-01&apos; AND &apos;1985-12-31&apos; ORDER BY birthday;
++----+-----------+----------+------------+-------------+---------------------------------------+-----------+
+| id | firstname | lastname | birthday   | birth_place | biography                             | is_muggle |
++----+-----------+----------+------------+-------------+---------------------------------------+-----------+
+|  6 | fred      | weasley  | 1978-04-01 |             |                                       |         0 |
+|  7 | george    | weasley  | 1978-04-01 |             |                                       |         0 |
+|  2 | hermione  | granger  | 1979-09-19 |             | Friend of Harry Potter                |         0 |
+|  4 | ron       | weasley  | 1980-03-01 |             | Best friend of Harry                  |         0 |
+| 10 | drago     | malefoy  | 1980-06-05 |             |                                       |         0 |
+| 14 | dudley    | dursley  | 1980-06-23 |             | Cousin d&apos;Harry                        |         1 |
+|  1 | harry     | potter   | 1980-07-31 | london      |                                       |         0 |
+|  5 | ginny     | weasley  | 1981-08-11 |             | Sister of Ron and girlfriend of Harry |         0 |
++----+-----------+----------+------------+-------------+---------------------------------------+-----------+
+<b>8 rows in set (0.001 sec)</b>
+</pre>
