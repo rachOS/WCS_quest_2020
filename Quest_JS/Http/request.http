@@ -1,20 +1,12 @@
-GET https://api.ipify.org/
+GET https://http-practice.herokuapp.com/wilders
 
 ###
-GET https://upload.wikimedia.org/wikipedia/commons/2/20/UnderCon_icon.svg
-
-###
-GET https://www.w3.org/History/19921103-hypertext/hypertext/WWW/TheProject.html
-
-###
-GET https://http-practice.herokuapp.com/status
-
-###
-GET ￼https://http-practice.herokuapp.com/status
-Accept: application/json
+GET https://http-practice.herokuapp.com/wilders?page=2&language=PHP
 
 ###
 GET http-practice.herokuapp.com/wilders?language=JavaScript
+###
+GET http-practice.herokuapp.com/wilders/1941
 
 ###
 POST https://http-practice.herokuapp.com/wilders
