@@ -1,0 +1,45 @@
+GET https://api.ipify.org/
+
+###
+GET https://upload.wikimedia.org/wikipedia/commons/2/20/UnderCon_icon.svg
+
+###
+GET https://www.w3.org/History/19921103-hypertext/hypertext/WWW/TheProject.html
+
+###
+GET https://http-practice.herokuapp.com/status
+
+###
+GET ￼https://http-practice.herokuapp.com/status
+Accept: application/json
+
+###
+GET http-practice.herokuapp.com/wilders?language=JavaScript
+
+###
+POST https://http-practice.herokuapp.com/wilders
+Content-Type: application/x-www-form-urlencoded
+
+name=John%20d'oh&language=PHP
+
+###
+POST https://http-practice.herokuapp.com/wilders
+Content-Type: application/JSON
+
+{
+  "name": "Tar Zan",
+  "language": "JavaScript"
+}
+
+###
+PUT  https://http-practice.herokuapp.com/wilders/1941
+Content-Type: application/JSON
+
+{
+  "name": "Tar Zan Boy",
+  "language": "JavaScript"
+}
+
+###
+DELETE  https://http-practice.herokuapp.com/wilders/1943
+
