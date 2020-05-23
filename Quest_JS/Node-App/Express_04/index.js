@@ -4,9 +4,7 @@ const port = 3000
 const connection = require('./conf')
 
 app.use(express.json());
-app.use(express.urlencoded({
-    extended: true
-}));
+app.use(express.urlencoded({ extended: true }));
 
 app.put('/api/movies/:id', (request, results) => {
     const idMovie = request.params.id
