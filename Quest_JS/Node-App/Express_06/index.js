@@ -18,7 +18,7 @@ app.get('/api/movies', (req, res) => {
          sqlValues.push(req.query.genre)
      } */
 
-     
+
     if (req.query.genre && req.query.rating) {
         sql += " WHERE genre = ? AND rating = ?";
         sqlValues.push(req.query.genre,req.query.rating)
@@ -30,6 +30,7 @@ app.get('/api/movies', (req, res) => {
         } else if (results.length === 0) {
             res.status(400).send('movie not found')
         } else {
+            // res.sendStatus(200)
             res.json(results)
         }
     })
