@@ -1,6 +1,7 @@
 <!-- Récupère tous les champs pour les sorciers nés entre 1975 et 1985 -->
-<pre>MariaDB [wild_db_quest]&gt; SELECT *
-    -&gt; FROM wizard;
+```SQL
+SELECT * FROM wizard;
+```
 +----+-----------+------------+------------+-------------+-------------------------------------------------------------+-----------+
 | id | firstname | lastname   | birthday   | birth_place | biography                                                   | is_muggle |
 +----+-----------+------------+------------+-------------+-------------------------------------------------------------+-----------+
