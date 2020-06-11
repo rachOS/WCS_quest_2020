@@ -39,7 +39,7 @@ app.get('/api/employee',
             resp.status(404).send('Je ne connais pas ce nom deso!')
         }
 
-        resp.end(name)
+        resp.end()
 
     }
 )
