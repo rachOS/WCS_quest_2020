@@ -25,13 +25,13 @@ app.get('/api/users', (req, res) => {
   });
 });
 
-app.post('/api/users', [
-  body('email').isEmail(),
-  body('password').isLength({ min: 8 }),
-], (req, res) =>
-// send an SQL query to get all users
+app.post(
+  '/api/users',
+  [body('email').isEmail(), body('password').isLength({ min: 8 })],
+  (req, res) => {
+    // send an SQL query to get all users
 
-/* const { email, name, password } = req.body;
+    /* const { email, name, password } = req.body;
   if (!email || !name || !password) {
     res.status(422).send('al least one of required fielfd is missing');
   }
@@ -49,22 +49,42 @@ app.post('/api/users', [
       { error: 'minimum length password is 8 characters' },
     );
   } */
-  connection.query(
-    'INSERT INTO user SET ?',
-    [req.body],
-    (err, results) => {
-      if (err) {
-        // If an error has occurred, then the client is informed of the error
-        res.status(500).json({
-          error: err.message,
-          sql: err.sql,
-        });
-      } else {
-        // If everything went well, we send the result of the SQL query as JSON
-        res.json(results);
-      }
-    },
-  ));
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(422).json({ errors: errors.array() });
+    }
+    return connection.query(
+      'INSERT INTO user SET ?',
+      [req.body],
+      (err, results) => {
+        if (err) {
+          // If an error has occurred, then the client is informed of the error
+          res.status(500).json({
+            error: err.message,
+            sql: err.sql,
+          });
+        }
+        return connection.query(
+          'SELECT * FROM user WHERE id = ?',
+          results.insertId,
+          (err2, records) => {
+            if (err2) {
+              return res.status(500).json({
+                error: err2.message,
+                sql: err2.sql,
+              });
+            }
+            const insertedUser = records[0];
+            const { password, ...user } = insertedUser;
+            const host = req.get('host');
+            const location = `http://${host}${req.url}/${user.id}`;
+            return res.status(201).set('Location', location).json(user);
+          },
+        );
+      },
+    );
+  },
+);
 
 app.listen(process.env.PORT, (err) => {
   if (err) {
