@@ -1,0 +1,46 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <title>Site Title</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="author" content="Author Name">
+    <meta name="description" content=" description of the website">
+
+    <link rel="icon" href="images/default_icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <template></template>
+
+</head>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+    $(function () {
+      var socket = io();
+      $('form').submit(function(e) {
+        e.preventDefault(); // prevents page reloading
+        socket.emit('chat message', $('#m').val());
+        $('#m').val('');
+        return false;
+      });
+      socket.on('chat message', function(msg){
+      $('#messages').append($('<li>').text(msg));
+    });
+    });
+  </script>
+<body>
+    <script src="index.js"></script>
+    <header></header>
+    <main>
+        <h1>Hello Socket.io</h1>
+        <ul id="messages"></ul>
+        <form action="">
+          <input id="m" autocomplete="off" /><button>Send</button>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html
