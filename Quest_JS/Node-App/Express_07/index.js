@@ -1,7 +1,7 @@
 // dotenv loads parameters (port and database config) from .env
 require('dotenv').config();
 const express = require('express');
-const { body, validationResult } = require('express-validator');
+const { check, validationResult } = require('express-validator');
 const connection = require('./db');
 
 const app = express();
@@ -24,10 +24,11 @@ app.get('/api/users', (req, res) => {
     }
   });
 });
+const userValidationMiddlewares = [check('email').isEmail(), check('password').isLength({ min: 8 })];
 
 app.post(
   '/api/users',
-  [body('email').isEmail(), body('password').isLength({ min: 8 })],
+  [userValidationMiddlewares],
   (req, res) => {
     // send an SQL query to get all users
 
@@ -58,8 +59,13 @@ app.post(
       [req.body],
       (err, results) => {
         if (err) {
+          if (err === 'ER_DUP_ENTRY') {
+            return res.status(409).json({
+              error: ' Email already exist',
+            });
+          }
           // If an error has occurred, then the client is informed of the error
-          res.status(500).json({
+          return res.status(500).json({
             error: err.message,
             sql: err.sql,
           });
@@ -85,6 +91,38 @@ app.post(
     );
   },
 );
+
+app.put('/api/users/:id', [userValidationMiddlewares], (req, res) => {
+  const { body } = req;
+  const { id } = req.params;
+  const sqlUpdate = 'UPDATE user SET ? WHERE id = ?';
+
+  connection.query(sqlUpdate, [body, id], (err, result) => {
+    if (err) {
+      if (err === 'ER_DUP_ENTRY') {
+        return res.status(409).json({ error: 'Email already exist' });
+      }
+      return res.status(500).json({
+        error: err.message,
+        sql: err.sql,
+      });
+    }
+    const sqlSelect = 'SELECT * FROM user WHERE id = ?';
+    return connection.query(sqlSelect, [id], (err2, records) => {
+      if (err2) {
+        res.status(500).json({
+          error: err2.message,
+          sql: err2.sql,
+        });
+      }
+      const updatedUser = records[0];
+      const { password, ...userz } = updatedUser;
+      const { hostname } = req;
+      const location = `${hostname}/${req.url}/${userz.id}`;
+      return res.status(200).set('Location', location).json(userz);
+    });
+  });
+});
 
 app.listen(process.env.PORT, (err) => {
   if (err) {
